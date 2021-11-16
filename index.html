@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="shortcut icon" href="images/signpost-2-fill.svg">
+  <meta name="description" content="景點旅遊網">
+  <meta name="keywords" content="台中旅遊、台南旅遊、高雄旅遊">
+  <title>旅遊套票</title>
+  <link rel="stylesheet" href="css/reset.css">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <section class="addTicket-panel">
+    <div class="addTicket-img">
+      <img src="images/pic01.png" alt="圖片">
+      <img src="images/pic02.png" alt="標題圖片">
+    </div>
+    <form action="" class="addTicket-form">
+      <h1 class="title"><span><i class="fas fa-plus-circle"></i></span>新增旅遊套票</h1>
+      <div class="form-group">
+        <div class="addTicket-input">
+          <label for="ticketName">套票名稱</label>
+          <input type="text" id="ticketName" placeholder="請填寫套票名稱" name="name" required>
+        </div>
+      </div>
+      <div class="form-group">
+        <div class="addTicket-input">
+          <label for="ticketImgUrl">圖片網址</label>
+          <input type="text" id="ticketImgUrl" placeholder="請填寫圖片網址" name="imgUrl" required>
+        </div>
+      </div>
+      <div class="form-group">
+        <div class="addTicket-input">
+          <label for="ticketRegion">景點地區</label>
+          <select id="ticketRegion" name="area" required>
+            <option value="" disabled selected hidden>請選擇景點地區</option>
+            <option value="台北">台北</option>
+            <option value="台中">台中</option>
+            <option value="高雄">高雄</option>
+          </select>
+        </div>
+      </div>
+      <div class="form-group">
+        <div class="addTicket-input">
+          <label for="ticketPrice">套票金額</label>
+          <input type="number" id="ticketPrice" placeholder="請填寫套票金額" name="price" min="0" required>
+        </div>
+      </div>
+      <div class="form-group">
+        <div class="addTicket-input">
+          <label for="ticketNum">套票組數</label>
+          <input type="number" id="ticketNum" placeholder="請填寫套票組數" name="group" min="1" required>
+        </div>
+      </div>
+      <div class="form-group">
+        <div class="addTicket-input">
+          <label for="ticketRate">套票星級</label>
+          <input type="number" id="ticketRate" placeholder="請填寫套票星級" name="rate" min="1" max="10" required>
+        </div>
+      </div>
+      <div class="form-group">
+        <div class="addTicket-input">
+          <label for="ticketDescription">套票描述</label>
+          <textarea name="description" id="ticketDescription" placeholder="請填寫套票描述 (限 100 字)" required></textarea>
+        </div>
+      </div>
+      <input type="submit" class="addTicket-btn btn" value="新增套票">
+    </form>
+    </section>
+    <section class="main-content">
+      <div class="search-area">
+        <select name="" class="regionSearch">
+          <option value="地區搜尋" disabled selected hidden>地區搜尋</option>
+          <option value="">全部地區</option>
+          <option value="台北">台北</option>
+          <option value="台中">台中</option>
+          <option value="高雄">高雄</option>
+        </select>
+        <p id="searchResult-text">本次搜尋共 3 筆資料</p>
+      </div>
+      <ul class="ticketCard-area">
+      </ul>
+    </section>
+    
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.24.0/axios.min.js"></script>
+  <script src="javascript/all.js"></script>
+</body>
+</html>
