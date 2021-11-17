@@ -71,15 +71,6 @@ const eventHandlerObj = {
   },
   changeSelect(e) {
     const filterStr = e.target.value;
-    /*
-    三元運算子 ESLint 噴錯寫法
-    filterStr === '' ? render() : render(ticketData.filter((item) => item.area === filterStr)) ;
-    不知道為什麼加上 return 就不會噴錯
-    return filterStr === ''
-      ? render()
-      : render(ticketData.filter((item) => item.area === filterStr)) ;
-    */
-    // 好閱讀版
     if (filterStr === '') {
       render();
     } else {
