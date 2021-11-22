@@ -251,6 +251,9 @@ body {
 .search-area p {
   color: #818a91;
 }
+.chart {
+  margin-left: auto;
+}
 
 @media (max-width: 768px) {
   .search-area {
@@ -450,4 +453,7 @@ body {
   .cantFind-area {
     margin-top: 0px;
   }
+}
+.d-flex {
+  display: flex;
 }
